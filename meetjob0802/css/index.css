@@ -1,0 +1,17 @@
+		h1{
+			color: #ff0000; /*#RGB ff=>R 00=>G 00=>B*/
+		}
+		h3{
+			color: #cccccc;
+		}
+		a{
+			font-size: 30px;
+			text-decoration: none; /*連結無底線*/
+			/*px 像素(相對) pt dpi像素 1/72英吋 em 字型大小 */
+		}
+		body{
+
+			color: #EB850C;
+			font-size: 40px;
+			font-family: arial,微軟正黑體;
+		}

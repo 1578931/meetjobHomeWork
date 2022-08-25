@@ -63,6 +63,25 @@
 					 $("#msg").text("登入失敗");
 				}
 			})
+
+
+			$("#discount").attr("checked",true);
+			$("#btn4").click(function(){
+				var price = $("#price").val();
+				var quantity = $("#quantity").val();
+				var total;
+
+
+
+				if($("#discount").attr("checked")){
+
+					total = (price * quantity) * 0.85;
+					total = total.toFixed(2);//取小數到第2位
+				}else{
+					total = (price * quantity);
+				}
+				$("#display").text(total);
+			})
 			});
 
 	</script>

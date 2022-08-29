@@ -1,0 +1,200 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<style>
+		
+		#menu{
+			
+			width: 100%;
+			height: 50px;
+			/*margin-left: 18%;*/
+			padding-top: 10px;
+
+			/*background-color: #555;*/
+		}
+		#content{
+			height: 70px;
+			width: 100%;
+		}
+		#menulist{
+			position: absolute;/*定位  fixed:固定 absolute依父位置做絕對位置*/
+			width: 100%;
+			height: 70px;
+			/*margin-left: 18%;
+			padding-top: 10px;*/
+			background-color: #555;
+			
+
+		}
+		#menulist , #menulist ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			 
+		}
+		#menulist li{
+			border-right: 1px solid #ffffff;
+			float: left;
+			background-color: #555;
+			list-style: none;
+
+		}
+		#menulist a{
+			color: #ffffff;
+			display: block;
+			text-decoration: none;
+			width: 80px;
+		}
+
+		#menulist li ul{
+			position: absolute;/*位置是絕對位置*/
+			left: auto;/*對於絕對位置元素, 會依內容需要的寬度去設置*/
+			width: 80px;
+
+		}
+		.info{
+			width: 100%;
+			height: 110px;
+		}
+		.cnfo{
+			width: 100%;
+			height: 688px;
+			padding-top: 25px;
+			background-color: #ff00ff;
+
+		}
+		#wrapper{
+		min-height: 100%;/*區塊高度為100%*/
+		margin-bottom: -100px;
+}
+#footer{
+	width: 100%;
+	height: 100px;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+	</style>
+
+
+	<script>
+		
+		$(document).ready(function() {
+			
+
+			$("#menulist li ul").hide();
+			$("#menulist li").hover(
+				
+				function(){
+					$(this).find("ul").slideDown("fast");
+					$(this).find("a:first").addClass("active");
+				},function(){
+					$(this).find(".submenu").fadeOut("fast");
+					$(this).find("a").removeClass("active");
+				}
+
+				)
+			
+		});
+		$(document).ready(function(){
+			$("#content").click(function(){
+
+				$(".cnfo").slideToggle();//收起
+
+				//slideDown放下
+				//slideToggle收起與放下
+				
+			})
+		});
+		$(document).ready(function(){
+			$("#btn1").click(function(){
+
+				var age = $("#age").val();
+				if (age >= 15 && age <= 50){
+					 var age = alert("輸入成功");
+				
+				}else{
+					  var age = alert("輸入失敗");
+				}
+			})
+		})
+
+	</script>
+
+</head>
+<body>
+	<div id="wrapper">
+		<div id="banner">
+			<div class="info">
+			
+			</div>
+		</div>
+
+		<div id="menu">
+
+			
+
+			<ul id="menulist">
+
+			
+				<li><a href="#">產品</a>
+				<ul class="submenu">
+					<li><a href="#">3c</a></li>
+					<li><a href="#">家電</a></li>
+					<li><a href="#">汽車</a></li>
+
+				</ul>
+			</li>
+			<li><a href="#">服務</a>
+				<ul class="submenu">
+					<li><a href="#">Line</a></li>
+					<li><a href="#">來電客服</a></li>
+					<li><a href="#">據點位置</a></li>
+
+				</ul>
+			</li>
+			<li><a href="#">服務</a>
+				<ul class="submenu">
+					<li><a href="#">Line</a></li>
+					<li><a href="#">來電客服</a></li>
+					<li><a href="#">據點位置</a></li>
+
+				</ul>
+			</li>
+			<li><a href="#">服務</a>
+				<ul class="submenu">
+					<li><a href="#">Line</a></li>
+					<li><a href="#">來電客服</a></li>
+					<li><a href="#">據點位置</a></li>
+
+				</ul>
+			</li>
+
+			<li><a href="#">聯繫我們</a></li>
+
+		</ul>
+
+
+	</div>
+
+	<div id="content">
+
+			<div class="cnfo">
+			區塊一
+			</div>
+			
+			
+		</div>
+	</div>
+	<div id="footer">
+			
+			年齡：<input type="text" id="age" name="age">
+			<button id="btn1">按鈕</button>
+
+	</div>
+
+</body>
+</html>

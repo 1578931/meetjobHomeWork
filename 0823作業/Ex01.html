@@ -28,11 +28,14 @@
 			background-color: #555;
 			
 
+
 		}
 		#menulist , #menulist ul{
 			list-style: none;
 			padding: 0;
 			margin: 0;
+			
+
 			 
 		}
 		#menulist li{
@@ -40,6 +43,10 @@
 			float: left;
 			background-color: #555;
 			list-style: none;
+			
+		margin-left: 10%;
+
+
 
 		}
 		#menulist a{
@@ -47,12 +54,16 @@
 			display: block;
 			text-decoration: none;
 			width: 80px;
+			
+
 		}
 
 		#menulist li ul{
 			position: absolute;/*位置是絕對位置*/
 			left: auto;/*對於絕對位置元素, 會依內容需要的寬度去設置*/
 			width: 80px;
+			
+
 
 		}
 		.info{
@@ -88,7 +99,23 @@
 	<script>
 		
 		$(document).ready(function() {
-			
+
+             $("#btn1").click(function(){
+
+				var age = $("#age").val();
+				if (age >= 15 && age <= 50){
+					 var age = alert("輸入成功");
+				
+				}else{
+					  var age = alert("輸入失敗");
+				}
+			})
+
+			$("#content").click(function(){
+
+				$(".cnfo").slideToggle();
+			})
+
 
 			$("#menulist li ul").hide();
 			$("#menulist li").hover(
@@ -104,29 +131,7 @@
 				)
 			
 		});
-		$(document).ready(function(){
-			$("#content").click(function(){
-
-				$(".cnfo").slideToggle();//收起
-
-				//slideDown放下
-				//slideToggle收起與放下
-				
-			})
-		});
-		$(document).ready(function(){
-			$("#btn1").click(function(){
-
-				var age = $("#age").val();
-				if (age >= 15 && age <= 50){
-					 var age = alert("輸入成功");
-				
-				}else{
-					  var age = alert("輸入失敗");
-				}
-			})
-		})
-
+		
 	</script>
 
 </head>

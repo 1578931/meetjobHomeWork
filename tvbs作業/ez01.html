@@ -5,7 +5,7 @@
 	<style>
 	
 	body{
-		margin: 0;
+		margin: 0 auto;
 		height: 100%;
 		overflow: auto;
 		align-items:center;
@@ -16,21 +16,49 @@
 	.wrapper{
 		width: 100%;
 		height: 100%;
-		margin-bottom: -100px;
+		/*margin-bottom: -100px;*/
 	}
 
 	#banner{
+		display: flex;
+		align-items: center;
+		
 		height: 70px;
-		width: 100%;
-		background-color: #ff00ff;
+
+		
+	}
+	.tvbs{
+		
+		float:left;
+		margin-left: 20em;
+
 	}
 	#menu{
 		height: 40px;
-		width: 100%;
-		background-color: #af0af0;
+		
+		background-color: #044996;
+		
+	}
+	#menu ul{
+
+		margin-left: 16em;
+		padding-top: 10px;
+		font-size: 16px;
+
+	}
+	#menu li{
+		list-style: none;
+		float: left;
+		padding-left: 2em;
+	}
+	#menu li a{
+		color: #ffffff;
+		text-decoration: none;
+		font-size: bold;
+
 	}
 	#content{
-		height:500px;
+		height:540px;
 		width: 100%;
 		background-color: #abc0bc;
 
@@ -42,18 +70,42 @@
 
 	}
 	.pvleft{
-		height: 500px;
+		height: 540px;
 		width: 65%;
 		float: left;
-		background-color: #f0f0f0;
-		
+		background-color: #000000;
+	}
+	.pvleft img{
+		width: 72.5%;
+		margin-left: 20em;
+
 	}
 	.pvright{
 		float: left;
-		height: 500px;
+		height: 540px;
 		width: 35%;
-		background-color: #afbfcf;
+		background-color: #000000;
 		
+	}
+	.pvrighttop{
+		margin-left: 2em;
+	}
+	.pvrighttop2{
+		margin-left: 2em;
+		padding-top: 1.5em;
+	}
+	.pvrighttop3{
+		margin-left: 2em;
+		padding-top: 1.5em;
+	}
+	.pvrighttop img{
+		width: 42.5%;
+	}
+	.pvrighttop2 img{
+		width: 42.5%;
+	}
+	.pvrighttop3 img{
+		width: 42.5%;
 	}
 
 
@@ -77,8 +129,21 @@
 	#menu2{
 		clear: both;
 		height: 80px;
-		width: 100%;
-		background-color: #af0af0;
+		
+	}
+	#menu2 ul{
+		margin-left: 25em;
+		
+		font-size: 40px;
+	}
+	#menu2 li{
+		list-style: none;
+		float: left;
+	}
+	#menu2 li a{
+		color: #000000;
+		
+		font-size: bold;
 	}
 	#hotnews{
 		height: 280px;
@@ -163,28 +228,56 @@
 	<div class="wrapper">
 
 		<div id="banner">
+			<div class="tvbs">
+				<img src="https://cc.tvbs.com.tw/portal_production/2022/images/TVBS_logo.svg">
+				
+			</div>
 			
 		</div>
 
 		<div id="menu">
 
+			<ul>
+				<li><a href="#">TVBS新聞</a></li>
+				<li><a href="#">女人我最大</a></li>
+				<li><a href="#">食尚玩家</a></li>
+				<li><a href="#">健康2.0</a></li>
+				<li><a href="#">地球黃金線</a></li>
+				<li><a href="#">節目</a></li>
+				<li><a href="#">戲劇</a></li>
+				<li><a href="#">享時尚</a></li>
+				<li><a href="#">基金會</a></li>
+				<li><a href="#">頻道資訊</a></li>
+				<li><a href="#">更多</a></li>
+			</ul>
 			
 		</div>
 
 		<div id="content">
 
 			<div class="pvleft">
-				
+				<img src="https://cc.tvbs.com.tw/portal/uploads/PortalVision/e863e4ef5a40fced03fc4104ba27b52b.jpg">
 			</div>
 
 			<div class="pvright">
+				<div class="pvrighttop">
+					<img src="https://cc.tvbs.com.tw/img/upload/2022/09/14/20220914214707-dc2e54bb.jpg">
+				</div>
+				<div class="pvrighttop2">
+					<img src="https://cc.tvbs.com.tw/img/upload/2022/06/17/20220617090303-c6c3bc88.jpg">
+				</div>
+				<div class="pvrighttop3">
+					<img src="https://cc.tvbs.com.tw/img/upload/2022/09/14/20220914195853-f297576b.jpg">
+				</div>
 				
 			</div>
 			
 		</div>
 
 		<div id="menu2">
-			
+			<ul>
+				<li><a href="#">TVBS新聞</a></li>
+			</ul>
 		</div>
 
 		<div id="ad">
